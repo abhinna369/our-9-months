@@ -1,0 +1,42 @@
+body{
+margin:0;
+padding:0;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-family:Arial,sans-serif;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#f6d365,#fdcb6e);
+background-size:400% 400%;
+animation:sky 12s ease infinite;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+@keyframes sky{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+h1{
+font-size:3rem;
+margin:0;
+animation:glow 2s infinite alternate;
+}
+
+p{
+font-size:1.4rem;
+margin-top:15px;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px white,0 0 20px pink;
+}
+to{
+text-shadow:0 0 20px white,0 0 40px hotpink;
+}
+}
