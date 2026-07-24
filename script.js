@@ -271,3 +271,30 @@ setTimeout(createCloud,i*2000);
 }
 
 setInterval(createCloud,10000);
+/* Fireflies */
+
+const fireflies=document.getElementById("fireflies");
+
+function createFirefly(){
+
+const firefly=document.createElement("div");
+
+firefly.className="firefly";
+
+firefly.style.left=Math.random()*100+"vw";
+firefly.style.top=Math.random()*100+"vh";
+
+firefly.style.setProperty("--x",(Math.random()*300-150)+"px");
+firefly.style.setProperty("--y",(Math.random()*300-150)+"px");
+
+firefly.style.animationDuration=(4+Math.random()*4)+"s";
+
+fireflies.appendChild(firefly);
+
+setTimeout(()=>{
+firefly.remove();
+},8000);
+
+}
+
+setInterval(createFirefly,250);
