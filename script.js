@@ -177,3 +177,36 @@ loveTimer.innerHTML =
 updateLoveTimer();
 
 setInterval(updateLoveTimer,1000);
+/* Gift Opening */
+
+const giftBox = document.getElementById("giftBox");
+const giftScreen = document.getElementById("giftScreen");
+const mainContent = document.getElementById("mainContent");
+
+giftBox.addEventListener("click", () => {
+
+    giftBox.style.transform = "scale(1.3) rotate(15deg)";
+    giftBox.innerHTML = "💖";
+
+    setTimeout(() => {
+
+        giftScreen.style.opacity = "0";
+
+        setTimeout(() => {
+            giftScreen.style.display = "none";
+            mainContent.style.display = "flex";
+
+            for(let i=0;i<150;i++){
+                createPetal();
+            }
+
+            const music=document.getElementById("bgMusic");
+            if(music){
+                music.play().catch(()=>{});
+            }
+
+        },1000);
+
+    },700);
+
+});
