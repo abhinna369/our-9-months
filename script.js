@@ -210,3 +210,13 @@ giftBox.addEventListener("click", () => {
     },700);
 
 });
+document.getElementById("loveBtn").addEventListener("click",()=>{
+
+for(let i=0;i<300;i++){
+createHeart();
+createPetal();
+}
+
+alert("No matter where life takes us...\n\nMy heart will always find its way back to uuu. ❤️🌻");
+
+});
