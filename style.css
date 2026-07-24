@@ -310,3 +310,25 @@ cursor:pointer;
 transform:scale(1.06) rotate(1deg);
 box-shadow:0 15px 40px rgba(255,105,180,.6);
 }
+#openingQuote{
+margin-top:25px;
+max-width:320px;
+font-size:1.1rem;
+line-height:1.8;
+text-align:center;
+opacity:.9;
+color:white;
+text-shadow:0 0 10px rgba(255,255,255,.8);
+animation:fadeText 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeText{
+from{
+opacity:.5;
+transform:translateY(5px);
+}
+to{
+opacity:1;
+transform:translateY(-5px);
+}
+}
