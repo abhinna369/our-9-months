@@ -298,3 +298,25 @@ firefly.remove();
 }
 
 setInterval(createFirefly,250);
+/* Shooting Stars */
+
+const shootingStars=document.getElementById("shootingStars");
+
+function createShootingStar(){
+
+const star=document.createElement("div");
+
+star.className="shooting-star";
+
+star.style.left=Math.random()*70+"vw";
+star.style.top=Math.random()*40+"vh";
+
+shootingStars.appendChild(star);
+
+setTimeout(()=>{
+star.remove();
+},1500);
+
+}
+
+setInterval(createShootingStar,7000);
