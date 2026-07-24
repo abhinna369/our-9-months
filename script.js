@@ -149,3 +149,31 @@ const music=document.getElementById("bgMusic");
 music.play().catch(()=>{});
 
 },{once:true});
+/* Love Timer */
+
+const startDate = new Date("2025-10-25T22:09:00+05:30");
+
+const loveTimer = document.getElementById("loveTimer");
+
+function updateLoveTimer(){
+
+const now = new Date();
+
+const diff = now - startDate;
+
+const days = Math.floor(diff/(1000*60*60*24));
+
+const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+const minutes = Math.floor((diff%(1000*60*60))/(1000*60));
+
+const seconds = Math.floor((diff%(1000*60))/1000);
+
+loveTimer.innerHTML =
+`${days} Days ❤️ ${hours} Hours ❤️ ${minutes} Minutes ❤️ ${seconds} Seconds`;
+
+}
+
+updateLoveTimer();
+
+setInterval(updateLoveTimer,1000);
