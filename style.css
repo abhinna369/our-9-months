@@ -213,3 +213,26 @@ opacity:1;
 transform:translateY(0);
 }
 }
+.timer-box{
+margin-top:35px;
+padding:20px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,255,255,.25);
+max-width:420px;
+width:90%;
+}
+
+.timer-box h3{
+font-size:1.3rem;
+margin-bottom:10px;
+}
+
+#loveTimer{
+font-size:1.2rem;
+font-weight:bold;
+color:#fff;
+text-shadow:0 0 12px #ff69b4;
+line-height:1.8;
+}
