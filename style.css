@@ -484,3 +484,46 @@ to{
 transform:translateX(calc(100vw + 300px));
 }
 }
+/* Moon */
+
+#moon{
+position:fixed;
+top:70px;
+right:60px;
+width:90px;
+height:90px;
+border-radius:50%;
+background:#fff8dc;
+box-shadow:
+0 0 20px #fff,
+0 0 40px #fff8dc,
+0 0 80px rgba(255,255,220,.8);
+animation:moonRise 8s ease-out forwards,
+moonGlow 3s ease-in-out infinite alternate;
+z-index:0;
+}
+
+@keyframes moonRise{
+from{
+transform:translateY(120px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes moonGlow{
+from{
+box-shadow:
+0 0 20px #fff,
+0 0 40px #fff8dc;
+}
+to{
+box-shadow:
+0 0 35px #fff,
+0 0 70px #fff8dc,
+0 0 110px rgba(255,255,220,.9);
+}
+}
