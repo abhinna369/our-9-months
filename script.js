@@ -239,3 +239,35 @@ star.style.animationDelay=Math.random()*3+"s";
 stars.appendChild(star);
 
 }
+/* Clouds */
+
+const clouds=document.getElementById("clouds");
+
+function createCloud(){
+
+const cloud=document.createElement("div");
+
+cloud.className="cloud";
+
+const size=80+Math.random()*120;
+
+cloud.style.width=size+"px";
+cloud.style.height=size*0.45+"px";
+
+cloud.style.top=Math.random()*35+"vh";
+
+cloud.style.animationDuration=(35+Math.random()*30)+"s";
+
+clouds.appendChild(cloud);
+
+setTimeout(()=>{
+cloud.remove();
+},70000);
+
+}
+
+for(let i=0;i<6;i++){
+setTimeout(createCloud,i*2000);
+}
+
+setInterval(createCloud,10000);
