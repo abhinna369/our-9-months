@@ -220,3 +220,22 @@ createPetal();
 alert("No matter where life takes us...\n\nMy heart will always find its way back to uuu. ❤️🌻");
 
 });
+/* Stars */
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDelay=Math.random()*3+"s";
+
+stars.appendChild(star);
+
+}
